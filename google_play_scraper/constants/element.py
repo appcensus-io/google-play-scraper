@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Any, Callable, List, Optional
+from typing import Any, Callable, Dict, List, Optional, Union
 
 from google_play_scraper.utils import nested_lookup
 from google_play_scraper.utils.data_processors import unescape_text
@@ -9,7 +9,7 @@ class ElementSpec:
     def __init__(
         self,
         ds_num: Optional[int],
-        data_map: List[int|str],
+        data_map: List[Union[int, str]],
         post_processor: Optional[Callable] = None,
         fallback_value: Any = None,
     ):
@@ -68,7 +68,7 @@ def get_categories(s):
     return categories
 
 
-def resolve_specs(data: Any, mappings: dict[str, ElementSpec]) -> dict[str, Any]:
+def resolve_specs(data: Any, mappings: Dict[str, ElementSpec]) -> Dict[str, Any]:
     result = {}
 
     for key, spec in mappings.items():
