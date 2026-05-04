@@ -81,7 +81,7 @@ class TestApp(TestCase):
         self.assertEqual("Fantasy Violence", result["contentRatingDescription"])
         self.assertTrue(result["adSupported"])
         self.assertTrue(result["containsAds"])
-        self.assertEqual("Jan 7, 2014", result["released"])
+        self.assertEqual(1389138923, result["released"])
         self.assertEqual(1692642233, result["updated"])
         self.assertEqual("Varies with device", result["version"])
         self.assertFalse(result["comments"])
