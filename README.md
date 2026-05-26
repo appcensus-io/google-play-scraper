@@ -90,7 +90,7 @@ Result of `print(result)`:
     "contentRatingDescription": "Mild Fantasy Violence",
     "adSupported": False,
     "containsAds": False,
-    "released": "Jul 6, 2016",
+    "released": 1467850267,
     "updated": 1654116395,
     "version": "0.239.1",
     "comments": [
